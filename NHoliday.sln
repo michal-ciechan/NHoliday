@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHoliday", "NHoliday\NHoliday.csproj", "{D2640EF5-6E01-425A-A3B3-E5E81370112A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHolidayTests", "NHolidayTests\NHolidayTests.csproj", "{5D268DB8-3743-4572-B5CA-B8D36DC8ED04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D3A55F26-02B3-42E9-9E83-FC559243215F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{D2640EF5-6E01-425A-A3B3-E5E81370112A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2640EF5-6E01-425A-A3B3-E5E81370112A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2640EF5-6E01-425A-A3B3-E5E81370112A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D268DB8-3743-4572-B5CA-B8D36DC8ED04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D268DB8-3743-4572-B5CA-B8D36DC8ED04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D268DB8-3743-4572-B5CA-B8D36DC8ED04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D268DB8-3743-4572-B5CA-B8D36DC8ED04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
