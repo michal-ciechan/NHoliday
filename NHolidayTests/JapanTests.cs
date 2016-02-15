@@ -11,16 +11,10 @@ namespace NHolidayTests
     public class JapanTests
     {
         [Test]
-        [TestCase(2016,1,1, ExpectedResult = true)]
-        [TestCase(2016,1,2, ExpectedResult = false)]
-        [TestCase(2017,1,1, ExpectedResult = true)]
-        [TestCase(2017,1,2, ExpectedResult = true)]
-        [TestCase(2017,1,3, ExpectedResult = false)]
-        public bool IsHoliday_NewYearsEve(int year, int month, int day)
+        public bool IsPublicHoliday_2016(int year, int month, int day)
         {
             return Japan.IsPublicHoliday(new DateTime(year, month, day));
         }
-
 
         [Test]
         [TestCase(2016, 1, 1, ExpectedResult = true)]
@@ -63,6 +57,44 @@ namespace NHolidayTests
         public bool IsFoundationDay(int year, int month, int day)
         {
             return Japan.IsFoundationDay(new DateTime(year, month, day));
+        }
+
+        [Test]
+        [TestCase(2015, 3, 20, ExpectedResult = false)]
+        [TestCase(2015, 3, 21, ExpectedResult = true)]
+        [TestCase(2015, 3, 20, ExpectedResult = false)]
+        [TestCase(2016, 3, 19, ExpectedResult = false)]
+        [TestCase(2016, 3, 20, ExpectedResult = true)]
+        [TestCase(2016, 3, 21, ExpectedResult = true)]
+        [TestCase(2016, 3, 22, ExpectedResult = false)]
+        [TestCase(2017, 3, 19, ExpectedResult = false)]
+        [TestCase(2017, 3, 20, ExpectedResult = true)]
+        [TestCase(2017, 3, 21, ExpectedResult = false)]
+        [TestCase(2018, 3, 20, ExpectedResult = false)]
+        [TestCase(2018, 3, 21, ExpectedResult = true)]
+        [TestCase(2018, 3, 22, ExpectedResult = false)]
+        public bool IsVernalEquinoxDay(int year, int month, int day)
+        {
+            return Japan.IsVernalEquinoxDay(new DateTime(year, month, day));
+        }
+
+        [Test]
+        [TestCase(2015, 4, 28, ExpectedResult = false)]
+        [TestCase(2015, 4, 29, ExpectedResult = true)]
+        [TestCase(2015, 4, 30, ExpectedResult = false)]
+        [TestCase(2016, 4, 28, ExpectedResult = false)]
+        [TestCase(2016, 4, 29, ExpectedResult = true)]
+        [TestCase(2016, 4, 30, ExpectedResult = false)]
+        [TestCase(2017, 4, 28, ExpectedResult = false)]
+        [TestCase(2017, 4, 29, ExpectedResult = true)]
+        [TestCase(2017, 4, 30, ExpectedResult = false)]
+        [TestCase(2018, 4, 28, ExpectedResult = false)]
+        [TestCase(2018, 4, 29, ExpectedResult = true)]
+        [TestCase(2018, 4, 30, ExpectedResult = true)]
+        [TestCase(2018, 5, 1, ExpectedResult = false)]
+        public bool IsShowaDay(int year, int month, int day)
+        {
+            return Japan.IsShowaDay(new DateTime(year, month, day));
         }
     }
 }

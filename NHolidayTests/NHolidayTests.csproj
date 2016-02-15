@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DateTimeHelperTests.cs" />
+    <Compile Include="EquinoxTests.cs" />
+    <Compile Include="JapanTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

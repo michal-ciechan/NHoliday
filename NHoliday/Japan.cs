@@ -24,7 +24,7 @@ namespace NHoliday
         {
             if (dateTime.Month != 1) return false;
 
-            var comingOfAgeDate = DayFinder.FindDay(dateTime.Year, dateTime.Month, DayOfWeek.Monday, 2);
+            var comingOfAgeDate = DateTimeHelper.FindDay(dateTime.Year, dateTime.Month, DayOfWeek.Monday, 2);
 
             return dateTime.Day == comingOfAgeDate;
         }
@@ -36,6 +36,29 @@ namespace NHoliday
             if (dateTime.Day == 11) return true;
 
              return dateTime.Day == 12 && dateTime.DayOfWeek == DayOfWeek.Monday;
+        }
+
+        public static bool IsVernalEquinoxDay(DateTime dateTime, bool ignoreStaleInfo = true)
+        {
+            if (dateTime.Month != 3) return false;
+
+            var equinoxDateTime = EquinoxDates.GetVernalEquinoxDateTime(dateTime.Year);
+            
+            var eq = equinoxDateTime.AddHours(9);
+
+            if (eq.Day == dateTime.Day)
+                return true;
+
+            return eq.DayOfWeek == DayOfWeek.Sunday && eq.Day + 1 == dateTime.Day;
+        }
+
+        public static bool IsShowaDay(DateTime dateTime)
+        {
+            if (dateTime.Month != 4) return false;
+
+            if (dateTime.Day == 29) return true;
+
+            return dateTime.Day == 30 && dateTime.DayOfWeek == DayOfWeek.Monday;
         }
     }
 }

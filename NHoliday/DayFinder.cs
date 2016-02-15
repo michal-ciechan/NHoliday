@@ -2,14 +2,12 @@ using System;
 
 namespace NHoliday
 {
-    public class DayFinder
+    public class DateTimeHelper
     {
-
         //For example to find the day for 2nd Friday, February, 2016
         //=>call FindDay(2016, 2, DayOfWeek.Friday, 2)
         public static int FindDay(int year, int month, DayOfWeek day, int occurance)
         {
-
             if (occurance == 0 || occurance > 5)
                 throw new Exception("Occurance is invalid");
 
