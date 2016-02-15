@@ -60,5 +60,32 @@ namespace NHoliday
 
             return dateTime.Day == 30 && dateTime.DayOfWeek == DayOfWeek.Monday;
         }
+
+        public static bool IsConstitutionMemorialDay(DateTime dateTime)
+        {
+            if (dateTime.Month != 5) return false;
+
+            if (dateTime.Day == 3) return true;
+
+            return dateTime.Day == 6 && dateTime.DayOfWeek == DayOfWeek.Wednesday;
+        }
+
+        public static bool IsGreeneryDay(DateTime dateTime)
+        {
+            if (dateTime.Month != 5) return false;
+
+            if (dateTime.Day == 4) return true;
+
+            return dateTime.Day == 6 && dateTime.DayOfWeek == DayOfWeek.Tuesday;
+        }
+
+        public static bool IsChildrensDay(DateTime dateTime)
+        {
+            if (dateTime.Month != 5) return false;
+
+            if (dateTime.Day == 5) return true;
+
+            return dateTime.Day == 6 && dateTime.DayOfWeek == DayOfWeek.Monday;
+        }
     }
 }
