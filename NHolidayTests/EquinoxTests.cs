@@ -12,7 +12,7 @@ namespace NHolidayTests
         [Test]
         public void TestVernalEquinoxDateTimes()
         {
-            Assert.Inconclusive("TODO: once some calculations are added for EquinoxDateTimes. Atm we have dates 1788 - 2211");
+            Assert.Inconclusive("TODO: once some calculations are added for VernalEquinoxDateTimes. Atm we have dates 1788 - 2211");
         }
     }
 }
