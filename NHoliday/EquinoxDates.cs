@@ -435,12 +435,23 @@ namespace NHoliday
         public static DateTime GetVernalEquinoxDateTime(int year)
         {
             if (year < 1900)
-                throw new Exception("Cannot get equinox date time for a year before 1900");
+                throw new Exception("Cannot get vernal equinox date time for a year before 1900");
 
             if (year > 2100)
-                throw new Exception("Cannot get equinox date time for a year after 2100");
+                throw new Exception("Cannot get vernal equinox date time for a year after 2100");
 
             return VernalEquinoxDateTimes[year - 1900];
+        }
+
+        public static DateTime GetAutumnalEquinoxDateTime(int year)
+        {
+            if (year < 1900)
+                throw new Exception("Cannot get autumnal equinox date time for a year before 1900");
+
+            if (year > 2100)
+                throw new Exception("Cannot get autumnal equinox date time for a year after 2100");
+
+            return AutumnalEquinoxDateTimes[year - 1900];
         }
     }
 }
