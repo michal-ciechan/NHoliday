@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DayFinder.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Japan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EquinoxDates.cs" />
