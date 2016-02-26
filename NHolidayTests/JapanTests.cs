@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using FluentAssertions;
 using NHoliday;
 using NUnit.Framework;
@@ -14,7 +12,7 @@ namespace NHolidayTests
         [Test]
         public void ListPublicHolidays_2016()
         {
-            var expected = new List<DateTime>()
+            var expected = new List<DateTime>
             {
                 new DateTime(2016, 1, 01),
                 new DateTime(2016, 1, 11),
@@ -43,7 +41,7 @@ namespace NHolidayTests
         [Test]
         public void ListPublicHolidays_2017()
         {
-            var expected = new List<DateTime>()
+            var expected = new List<DateTime>
             {
                 new DateTime(2017, 1, 01),
                 new DateTime(2017, 1, 02),
@@ -73,7 +71,7 @@ namespace NHolidayTests
         public void ListBankHolidays_2016()
         {
 
-            var expected = new List<DateTime>()
+            var expected = new List<DateTime>
             {
                 new DateTime(2016, 1, 2),
                 new DateTime(2016, 1, 3),
@@ -89,7 +87,7 @@ namespace NHolidayTests
         public void ListBankHolidays_2017()
         {
 
-            var expected = new List<DateTime>()
+            var expected = new List<DateTime>
             {
                 new DateTime(2017, 1, 2),
                 new DateTime(2017, 1, 3),
@@ -104,7 +102,7 @@ namespace NHolidayTests
         [Test]
         public void ListHolidays_2016()
         {
-            var expected = new List<DateTime>()
+            var expected = new List<DateTime>
             {
                 new DateTime(2016, 1, 01),
                 new DateTime(2016, 1, 02),
